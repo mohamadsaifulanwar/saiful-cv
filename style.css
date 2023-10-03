@@ -227,3 +227,14 @@ form button[type="submit"]:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* styles.css */
+.social-icons {
+    font-size: 2rem;
+    padding-right: 10px;
+    color: black;
+}
+
+.social-icons:hover {
+    color: cornflowerblue;
+}
