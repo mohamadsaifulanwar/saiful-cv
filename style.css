@@ -1,0 +1,229 @@
+body {
+    background-color: #f8f9fa;
+    /* Warna latar belakang */
+}
+
+/* Styling untuk Navbar */
+.navbar {
+    background-color: #343a40;
+    /* Warna latar belakang navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Menempatkan navbar di atas konten lainnya */
+    transition: background-color 0.3s ease;
+    /* Animasi perubahan warna latar belakang */
+}
+
+.navbar-brand,
+.nav-link {
+    color: #fff !important;
+    /* Warna teks navbar */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+    /* Warna ikon toggle */
+}
+
+/* Perubahan warna latar belakang navbar saat discroll */
+.navbar.scrolled {
+    background-color: #fff;
+    /* Warna latar belakang saat navbar discroll */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Efek bayangan lembut */
+}
+
+/* Warna teks navbar saat discroll */
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .nav-link {
+    color: #333 !important;
+}
+
+/* Styling untuk bagian Home */
+#home {
+    padding: 60px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#home h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    /* Warna teks */
+}
+
+#home p {
+    font-size: 18px;
+    color: #555;
+    /* Warna teks */
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    /* Warna tombol */
+    border-color: #007bff;
+    /* Warna border tombol */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    /* Warna tombol saat hover */
+    border-color: #0056b3;
+    /* Warna border tombol saat hover */
+}
+
+.img-fluid {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Styling untuk gambar profil */
+.profile-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+    /* Menghasilkan bentuk bulat */
+    border: 5px solid #fff;
+    /* Border putih dengan ketebalan 5px */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Efek bayangan lembut */
+}
+
+/* Styling untuk bagian About Me */
+#about {
+    padding: 60px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#about h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    /* Warna teks */
+}
+
+#about p {
+    font-size: 18px;
+    color: #555;
+    /* Warna teks */
+    margin-bottom: 20px;
+}
+
+#about ul {
+    list-style: disc;
+    /* Gaya bullet list */
+    margin-left: 20px;
+}
+
+#about li {
+    font-size: 18px;
+    color: #555;
+    /* Warna teks */
+    margin-bottom: 5px;
+}
+
+/* Styling untuk bagian Contact Me */
+#contact {
+    padding: 60px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#contact h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    /* Warna teks */
+}
+
+#contact p {
+    font-size: 18px;
+    color: #555;
+    /* Warna teks */
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    font-size: 20px;
+    color: #007bff;
+    /* Warna link email */
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+    /* Garis bawah saat hover */
+}
+
+form .form-group {
+    margin-bottom: 20px;
+}
+
+form label {
+    font-size: 18px;
+    color: #333;
+    /* Warna label input */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    /* Warna border input */
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #007bff;
+    /* Warna tombol */
+    border: none;
+    color: #fff;
+    /* Warna teks tombol */
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Warna tombol saat hover */
+}
+
+/* Animasi untuk section yang akan muncul ke atas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Terapkan animasi pada section dengan class "animate-section" */
+/* .animate-section {
+    animation: fadeInUp 1s ease-out;
+} */
+
+/* Animasi awal */
+.animate-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Animasi saat elemen muncul dalam tampilan */
+.animate-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}

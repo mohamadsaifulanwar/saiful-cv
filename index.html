@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <!-- Menggunakan Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portofolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="container mt-5">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+                <h1>Welcome to My Portfolio</h1>
+                <p>I'm <b>Saiful</b>, a passionate web developer.</p>
+                <p>Let's build amazing web experiences together.</p>
+                <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="images/saiful.jpg" alt="saiful" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="container mt-5 animate-section">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p>I specialize in creating modern and user-friendly websites that leave a lasting impression.</p>
+                <p>My skills include:</p>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Bootstrap</li>
+                    <li>Laravel</li>
+                    <li>Figma</li>
+                    <li>Adobe XD</li>
+                    <li>Photoshop</li>
+                    <li>Ilustrator</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mt-5 animate-section">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Contact Me</h2>
+                <p>If you would like to get in touch with me, feel free to email me at:</p>
+                <p><a href="mailto:youremail@example.com"
+                        class="contact-link">mohamadsaiful056.if20@student.unusa.ac.id</a></p>
+            </div>
+            <div class="col-md-6">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            const animateSections = document.querySelectorAll(".animate-section");
+            animateSections.forEach((section) => {
+                if (isElementInViewport(section)) {
+                    section.classList.add("active");
+                }
+            });
+        }
+
+        // Mendeteksi saat scroll halaman
+        window.addEventListener("scroll", handleScroll);
+        // Memanggil handleScroll() saat halaman dimuat
+        window.addEventListener("load", handleScroll);
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactForm = document.getElementById("contact-form");
+
+            contactForm.addEventListener("submit", function (e) {
+                e.preventDefault(); // Mencegah pengiriman formulir secara default
+
+                // Di sini Anda dapat menambahkan kode untuk mengirim data formulir ke server atau menangani aksi yang sesuai.
+                // Misalnya, Anda dapat menggunakan JavaScript Fetch API untuk mengirim data formulir ke endpoint server.
+
+                // Contoh pengiriman data formulir dengan Fetch API:
+                fetch("/path/to/api/endpoint", {
+                    method: "POST",
+                    body: new FormData(contactForm), // Menggunakan data formulir
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // Menangani ketika pengiriman berhasil
+                            alert("Pesan berhasil terkirim!");
+                            contactForm.reset(); // Mengosongkan formulir setelah pengiriman berhasil
+                        } else {
+                            // Menangani ketika ada kesalahan dalam pengiriman
+                            alert("Terjadi kesalahan saat mengirim pesan.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Terjadi kesalahan:", error);
+                    });
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
