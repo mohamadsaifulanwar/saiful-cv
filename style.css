@@ -41,11 +41,14 @@ body {
     color: #333 !important;
 }
 
+.col-md-6 {
+    margin: 20px 0;
+}
+
 /* Styling untuk bagian Home */
 #home {
     padding: 60px 0;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px 10px;
 }
 
 #home h1 {
@@ -96,8 +99,7 @@ body {
 /* Styling untuk bagian About Me */
 #about {
     padding: 60px 0;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px 10px;
 }
 
 #about h2 {
@@ -130,8 +132,7 @@ body {
 /* Styling untuk bagian Contact Me */
 #contact {
     padding: 60px 0;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px 10px;
 }
 
 #contact h2 {
