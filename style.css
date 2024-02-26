@@ -1,7 +1,64 @@
 body {
-    background-color: #f8f9fa;
-    /* Warna latar belakang */
+    margin: 0;
+    padding: 0;
 }
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.stars,
+.twinkling,
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.stars {
+    background: url('https://www.transparenttextures.com/patterns/starfield.png');
+    z-index: 0;
+}
+
+.twinkling {
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    z-index: 1;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+    background: url('https://www.transparenttextures.com/patterns/white-leather.png');
+    z-index: 2;
+    animation: move-clouds-back 100s linear infinite;
+}
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}
+
 
 /* Styling untuk Navbar */
 .navbar {
@@ -41,14 +98,17 @@ body {
     color: #333 !important;
 }
 
-.col-md-6 {
-    margin: 20px 0;
+.row {
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Styling untuk bagian Home */
 #home {
-    padding: 60px 0;
-    margin: 100px 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+
 }
 
 #home h1 {
@@ -98,8 +158,9 @@ body {
 
 /* Styling untuk bagian About Me */
 #about {
-    padding: 60px 0;
-    margin: 100px 10px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+
 }
 
 #about h2 {
@@ -131,8 +192,8 @@ body {
 
 /* Styling untuk bagian Contact Me */
 #contact {
-    padding: 60px 0;
-    margin: 100px 10px;
+    padding: 10px;
+    margin-bottom: 50px;
 }
 
 #contact h2 {
@@ -198,41 +259,22 @@ form button[type="submit"]:hover {
     /* Warna tombol saat hover */
 }
 
-/* Animasi untuk section yang akan muncul ke atas */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Terapkan animasi pada section dengan class "animate-section" */
-/* .animate-section {
-    animation: fadeInUp 1s ease-out;
-} */
-
-/* Animasi awal */
 .animate-section {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Animasi saat elemen muncul dalam tampilan */
-.animate-section.active {
+.animate-section.section-reveal {
     opacity: 1;
     transform: translateY(0);
 }
 
+
 /* styles.css */
 .social-icons {
-    font-size: 2rem;
-    padding-right: 10px;
+    font-size: 50px;
+    margin-right: 10px;
     color: black;
 }
 
