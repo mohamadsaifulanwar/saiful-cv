@@ -1,0 +1,1 @@
+Lulusan S1 Sistem Informasi Universitas Nahdlatul Ulama Surabaya (UNUSA) dengan pengalaman 5 tahun sebagai Administrasi IT di Lembaga Sertifikasi Profesi (LSP), berkomitmen untuk mengembangkan karir di bidang Teknologi Informasi, memiliki kemampuan berpikir kritis dan komunikasi yang kuat, serta berpengalaman dalam berbagai proyek, termasuk Capstone Project dan Desain Grafis.
